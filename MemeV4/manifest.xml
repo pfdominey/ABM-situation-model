@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package uuid="memev4-f468d2" version="0.0.0">
+ <names>
+  <name lang="en_US">MemeV4</name>
+ </names>
+ <supportedLanguages>
+  <language>en_US</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <dialogContent typeVersion="1.0" topicName="choosePlaces">
+   <topic path="choosePlaces/choosePlaces_frf.top" language="fr_FR"/>
+  </dialogContent>
+  <dialogContent typeVersion="1.0" topicName="MemAutoBio">
+   <topic path="MemAutoBio/MemAutoBio_frf.top" language="fr_FR"/>
+  </dialogContent>
+ </contents>
+</package>

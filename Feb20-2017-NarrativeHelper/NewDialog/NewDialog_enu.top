@@ -1,0 +1,23 @@
+topic: ~NewDialog()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+
+u:(remember something) Ah, memories $memories=1
+
+u:(let's interact) Ok lets interact! $interact=1
+
+u:(use the internet) Onto the web! $internet=1
+
+u:(let's talk) life is narrative! $narrative=1
+
+u:(clear memory) starting over! ^clear(texas) ^clear(taichi)
+

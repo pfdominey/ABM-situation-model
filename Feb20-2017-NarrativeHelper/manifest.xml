@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.0" uuid="feb20-2017-narrativehelper-0bf1e4">
+ <names>
+  <name lang="en_US">Feb20-2017-NarrativeHelper</name>
+ </names>
+ <supportedLanguages>
+  <language>en_US</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <dialogContent topicName="NewDialog" typeVersion="1.0">
+   <topic path="NewDialog/NewDialog_enu.top" language="en_US"/>
+  </dialogContent>
+  <dialogContent topicName="FirstNarrative" typeVersion="1.0">
+   <topic path="FirstNarrative/FirstNarrative_enu.top" language="en_US"/>
+  </dialogContent>
+  <dialogContent topicName="PickMemories" typeVersion="1.0">
+   <topic path="PickMemories/PickMemories_enu.top" language="en_US"/>
+  </dialogContent>
+  <dialogContent topicName="PickExercise" typeVersion="1.0">
+   <topic path="PickExercise/PickExercise_enu.top" language="en_US"/>
+  </dialogContent>
+  <dialogContent topicName="NarrativeLearning" typeVersion="1.0">
+   <topic path="NarrativeLearning/NarrativeLearning_enu.top" language="en_US"/>
+  </dialogContent>
+  <dialogContent topicName="ExampleDialog" typeVersion="1.0">
+   <topic path="behavior_1/ExampleDialog/ExampleDialog_enu.top" language="en_US"/>
+  </dialogContent>
+  <dialogContent topicName="TestRDB" typeVersion="1.0">
+   <topic path="TestRDB/TestRDB_enu.top" language="en_US"/>
+  </dialogContent>
+  <dialogContent topicName="NarrativeHistory" typeVersion="1.0">
+   <topic path="NarrativeHistory/NarrativeHistory_enu.top" language="en_US"/>
+  </dialogContent>
+ </contents>
+</package>

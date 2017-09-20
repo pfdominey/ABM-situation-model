@@ -1,0 +1,38 @@
+topic: ~TestRDB()
+language: enu
+
+concept:(complex_stuff) [one two three four]
+
+u:(my name is _[peter bill john])
+    ^addKnowledge(user42, hasName, $1)
+    $1 ...., That's a nice name..
+    where were you born?
+u:(in _[washington texas california])
+    ^addKnowledge(user42, wasBorn, $1)
+    $1 ...., That's a great place..
+    where do you live now?
+
+u:(Now I live in _[lyon paris dijon])
+    ^addKnowledge(user42, livesIn, $1)
+    It must be nice $1 ...., That's a great place..
+    
+    
+u:(what is my story)
+    your name is ^queryKnowledge(user42, hasName, ?)...
+    You were born in ^queryKnowledge(user42, wasBorn, ?)!!
+    and, you live in ^queryKnowledge(user42, livesIn, ?)
+
+    
+        
+u:(what is my name)
+    your name is ^queryKnowledge(user42, hasName, ?)
+u:(where was I born)
+    You were born in ^queryKnowledge(user42, wasBorn, ?)
+u:(where do I live)
+    You live in ^queryKnowledge(user42, livesIn, ?)
+       
+u:(do _~complex_stuff)
+    Querying $makeComplexQuery=$1
+    
+    u1:(e:complexResult)
+        Result is $complexResult

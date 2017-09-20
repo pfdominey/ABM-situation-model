@@ -1,0 +1,27 @@
+topic: ~FirstNarrative()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+
+proposal: First you came to Lyon
+proposal: then you met Jocelyne
+proposal: then you started your family together
+proposal: then you moved to St Maurice
+proposal: and now you are here!
+proposal: that's the end of this story
+
+
+u:([hi hello]) [hello hi] human
+
+u:(remind me of the story)
+    this is one of my favorite stories
+
+u:([first then next after]) ^nextProposal

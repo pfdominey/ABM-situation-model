@@ -1,0 +1,24 @@
+topic: ~choosePlaces()
+language: frf
+
+# 
+u: (on va commencer)
+    Bonjour Madeleine.... Peter m'a expliqué quelques choses sur votre passé.    
+    Rappelez-moi le nom de la ville où vous êtes né?    
+    
+
+u:(saint agnant) bien sur, saint agnant $saintagnant=1
+u:([rochefort Rochefort]) oui, Rochefort est un endroit charmant $rochefort=1  
+u: ([sport tai-chi "Faisons du sport"]) C'est bon de faire de l'exercice. Suivez ce que je fais - je vais vous montrer $taichi=1
+u: ([souvenir souvenirs "parlons de bridge"]) Je me souviens de certaines choses $abmmemory=1
+u: ([internet]) faison du l'internet $internet=1
+
+u:(au revoir) au revoir et merci, Madeleine. Je me souviendrai de toi pour toujours!!
+
+
+
+
+# condition on variable in answer
+u:(["Qu'avons-nous fait aujourd'hui" ensuite]) ["Nous avons parlé de Saint Agnant $saintagnant==1" "Nous avons parlé de Rochefort $rochefort==1" "Nous avons parlé de bridge $abmmemory==1" "Nous avons fait de tai-chi $taichi==1" "au revoir"]
+
+
