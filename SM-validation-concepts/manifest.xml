@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package uuid="sm-validation-concepts-e283ac" version="0.0.0">
+ <names>
+  <name lang="en_US">SM-validation-concepts</name>
+ </names>
+ <supportedLanguages>
+  <language>en_US</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+ <services>
+  <service autorun="true" name="KnowledgeHelper" execStart="python knowledge_helper.py --qi-url=[URL]"/>
+ </services>
+</package>

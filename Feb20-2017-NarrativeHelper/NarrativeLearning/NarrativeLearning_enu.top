@@ -1,0 +1,34 @@
+topic: ~NarrativeLearning()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+
+u:(today we did taichi) tai chi was great $taichi=tai-chi
+u:(today we talked about texas) talking about texas was fun $texas=texas
+u:(did we do taichi?) ^first["yes we did do some $taichi $taichi<>0" "not yet, but we can"]
+u:(did we talk about texas?) ^first["we sure did talk about $texas $texas<>0" "no but I'd love to talk about texas"]
+
+# condition on variable in answer
+#u:(input) ["answer $variableName==value" "another answer"]
+
+
+proposal: we used the internet $internet 
+proposal: we did $taichi 
+proposal: we sure did talk about $texas 
+proposal: that's about it
+
+
+
+u:(what did we do today)
+    let me remebmer
+
+u:(["what else"]) ^nextProposal
+
