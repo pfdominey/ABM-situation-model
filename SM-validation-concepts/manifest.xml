@@ -16,4 +16,7 @@
    <permissions/>
   </behaviorContent>
  </contents>
+ <services>
+  <service autorun="true" name="KnowledgeHelper" execStart="python knowledge_helper.py --qi-url=[URL]"/>
+ </services>
 </package>

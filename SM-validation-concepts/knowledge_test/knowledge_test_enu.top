@@ -9,20 +9,30 @@ concept:(value) [houston boston easy difficult hard great fun boring solved]
 
 # add an event to the Autobiographical memory (ABM)    
     u:(_~subject {sent} _~predicate about the _~object)
-        ^addKnowledge($1, $2, $3)  
-    $context = $3
-    So $1 told you about the $3 via $2
-
+        ^call(KnowledgeHelper.createToldEpisode($1, $2, $3))
+        $context = $3
+        So $1 told you about the $3 via $2
 
 # add feature-value pairs to the SM context
 u:(_~feature {it} was _~value)
-    ^addKnowledge($context, $1, $2)
+    ^call(KnowledgeHelper.addEventToCurrentEpisode($1, $2))
     the $context $1 was $2
 
 # recall the context: after this query the context is set
 u:(did I get _~predicate from _~subject ) 
-    $context = ^queryKnowledge($2, $1, ?)
-    Sure I remember, $2 told you about the $context
+    let me check...
+    $who = $2
+    ^call(KnowledgeHelper.retrieveEpisodeId($who, $1))
+    c1:(_*)
+        $episodeId = $1
+        Errr...
+        ^call(KnowledgeHelper.labelForEpisode($episodeId))
+        c2:(_*)
+            $context = $1
+            Sure I remember, $who told you about the $context
+    
 u:(what was {the}_~feature)
-    the $context $1 was ^queryKnowledge($context, $1, ?)
-   
+    $feature = $1
+    ^call(KnowledgeHelper.recallValue($episodeId, $1))
+    c1:(_*)
+        the $context $feature was $1
